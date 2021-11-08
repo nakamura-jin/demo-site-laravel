@@ -33,14 +33,16 @@ class AuthController extends Controller
         return response()->json(['data' => $items]);
     }
 
-    public function login(Request $request)
+
+    public function getUser(Request $request)
     {
         $item = User::where('email', $request->email)->first();
 
-        if($item) {
-            return response()->json(['data' => $item], 200);
+        if ($item) {
+            return response()->json(['data' => $item], 201);
         } else {
             return response()->json(['message' => 'ユーザーが見当たりません'], 404);
         }
     }
+
 }
