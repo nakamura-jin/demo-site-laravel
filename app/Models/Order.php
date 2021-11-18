@@ -11,9 +11,8 @@ class Order extends Model
 
     // protected $fillable = ['user_id', 'menu_list', 'total_price', 'display', 'date', 'time'];
 
-    protected $casts = ['menu_list' => 'json'];
+        protected $casts = ['menu_list' => 'json'];
 
-    protected $guarded = ['id'];
-
+        protected $guarded = ['id'];
 
 }

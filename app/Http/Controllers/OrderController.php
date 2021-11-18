@@ -19,9 +19,9 @@ class OrderController extends Controller
         foreach ($items as $item) {
             $lists = [];
             foreach ($item->menu_list as $id) {
-                $menu = Menu::where('id', $id)->first();
-                // $item
-                $menu->quantity = $id['quantity'];
+                $menu = Menu::where('id', $id['id'])->first();
+                $menu->quantity = $id[('quantity')];
+                // $menu = $id['quantity'];
 
                 array_push($lists, $menu);
             }

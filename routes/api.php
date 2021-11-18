@@ -36,6 +36,8 @@ Route::delete('/member/{id}', [UserController::class, 'destroy']);
 
 // user
 Route::get('/user_list', [UserController::class, 'userList']);
+Route::get('/user/{id}', [UserController::class, 'show']);
+Route::put('/user/{id}', [UserController::class, 'update']);
 
 // menu
 Route::post('/menu', [MenuController::class, 'store']);
